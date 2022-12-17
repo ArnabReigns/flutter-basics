@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:whatsapp_status_saver/pages/homepage.dart';
 import 'package:whatsapp_status_saver/pages/loginpage.dart';
 
@@ -14,16 +15,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      initialRoute: "/home",
+      initialRoute: "/login",
       routes: {
-        "/": (context) => LoginPage(),
+        "/": (context) => const LoginPage(),
         "/home" :(context) => Homepage(),
-        "/login": (context) => LoginPage(),
+        "/login": (context) => const LoginPage(),
       },
     );
   }
