@@ -12,17 +12,15 @@ class Homepage extends StatelessWidget {
     int days = 30;
     String name = "Arnab";
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            'Search Here',
-          ),
-            ),
-        body: SingleChildScrollView(),
+    return Scaffold(
+      
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Whatsapp Status Saver"),
+      ),
+      body: Center(
+        child: Text("Welcome to $days days of Flutter by $name."),
       ),
     );
-}
-
+  }
 }
